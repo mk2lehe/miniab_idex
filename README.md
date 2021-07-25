@@ -9,6 +9,7 @@ A cartesian idex machine built from scraps and leftovers, with a usable build vo
 * Fluidd
 * Fysetc S6 with 6xTMC2209 in UART mode (X1, X2, E1, E2, Z, Y)
 * 2xMini-afterburner
-* Dual Z steppers, but driven in series (with a single driver).
 * Dual Z endstops. Z1 is used for homing reference, Z2 is used for carriage tilt measuring.
  
+![machine](20210725_151750.jpg)
+![sample](20210725_212956.jpg)
