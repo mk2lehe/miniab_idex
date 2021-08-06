@@ -19,6 +19,7 @@ Superslicer still has some work in fully supporting idex. For example wipe tower
 workaround; filament start & end gcode. 
 
 Workaround *thanks* to https://github.com/prusa3d/PrusaSlicer/issues/5377
+
     ;  -------------------------------------->>>
     ; Custom G-code: Filament ABS - Start - START
     ; T[current_extruder] ; Current extruder
