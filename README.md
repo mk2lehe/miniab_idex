@@ -19,26 +19,26 @@ Superslicer still has some work in fully supporting idex. For example wipe tower
 workaround; filament start & end gcode. 
 
 Workaround *thanks* to https://github.com/prusa3d/PrusaSlicer/issues/5377
-;  -------------------------------------->>>
-; Custom G-code: Filament ABS - Start - START
-; T[current_extruder] ; Current extruder
-{if wipe_tower}
-; Wipe Tower used. Do extra de-retract.
-G92 E0 ; Zero extruders
-G1 E6 F2400
-; G1 E{4 + retract_restart_extra_toolchange[current_extruder]} F{60 * deretract_speed[current_extruder]} ; De-retract for toolchange, 4mm.
-{endif}
-; Custom G-code: Filament ABS - Start - END
-; <<<--------------------------------------
+    ;  -------------------------------------->>>
+    ; Custom G-code: Filament ABS - Start - START
+    ; T[current_extruder] ; Current extruder
+    {if wipe_tower}
+    ; Wipe Tower used. Do extra de-retract.
+    G92 E0 ; Zero extruders
+    G1 E6 F2400
+    ; G1 E{4 + retract_restart_extra_toolchange[current_extruder]} F{60 * deretract_speed[current_extruder]} ; De-retract for toolchange, 4mm.
+    {endif}
+    ; Custom G-code: Filament ABS - Start - END
+    ; <<<--------------------------------------
 
-; -------------------------------------->>>
-; Custom G-code: Filament ABS - End - START
-; T[current_extruder] ; Current extruder
-{if wipe_tower}
-; Wipe Tower used. Do extra retract.
-G92 E0 ; Zero extruders
-G1 E-6 F2400
-; G1 E-4 F{60 * retract_speed[current_extruder]} ; Retract for toolchange, 4mm.
-{endif}
-; Custom G-code: Filament ABS - End - END
-; <<<--------------------------------------
+    ; -------------------------------------->>>
+    ; Custom G-code: Filament ABS - End - START
+    ; T[current_extruder] ; Current extruder
+    {if wipe_tower}
+    ; Wipe Tower used. Do extra retract.
+    G92 E0 ; Zero extruders
+    G1 E-6 F2400
+    ; G1 E-4 F{60 * retract_speed[current_extruder]} ; Retract for toolchange, 4mm.
+    {endif}
+    ; Custom G-code: Filament ABS - End - END
+    ; <<<--------------------------------------
