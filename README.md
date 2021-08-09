@@ -44,6 +44,9 @@ Workaround *thanks* to https://github.com/prusa3d/PrusaSlicer/issues/5377
     ; Custom G-code: Filament ABS - End - END
     ; <<<--------------------------------------
 
+Cannot use PETG in dual material; too low adhesion.
+Print ABS on PLA works excellent, superslicer has good support for solid interfaces.
+
 ## Issues
 Oozing from unused hotend. I want to add blockers, maybe thin flexible brass? 
 No mirroring/duplication support (waiting for klipper).
