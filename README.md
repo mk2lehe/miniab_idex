@@ -1,5 +1,5 @@
 # miniab_idex
-An idex playground built out of frankensteinium (voron miniab + anet + steel frame anyone?)
+An idex playground built out of frankensteinium (voron miniab + anet scraps + steel frame anyone?)
 
 ## Machine description
 A cartesian idex machine built from scraps and leftovers, with a usable build volume of about 200x200x240.
@@ -7,7 +7,7 @@ A cartesian idex machine built from scraps and leftovers, with a usable build vo
 * Klipper 
 * Rpi 3b
 * Fluidd
-* Fysetc S6 with 6xTMC2209 in UART mode (X1, X2, E1, E2, Z, Y)
+* Fysetc S6 with 6xTMC2209 in UART mode (X1, X2, E1, E2, Z (both motors are in series), Y)
 * 2xMini-afterburner
 * Dual Z endstops. Z1 is used for homing reference, Z2 is used for carriage tilt measuring.
  
@@ -15,7 +15,7 @@ A cartesian idex machine built from scraps and leftovers, with a usable build vo
 ![sample](20210725_212956.jpg)
 
 ## Findings
-Superslicer still has some work in fully supporting idex. For example wipe tower - does not work as intended. 
+Superslicer still has some work in fully supporting idex. For example wipe tower - tool change retract/unretract does not work as intended  
 workaround; filament start & end gcode. 
 
 Workaround *thanks* to https://github.com/prusa3d/PrusaSlicer/issues/5377
@@ -43,3 +43,12 @@ Workaround *thanks* to https://github.com/prusa3d/PrusaSlicer/issues/5377
     {endif}
     ; Custom G-code: Filament ABS - End - END
     ; <<<--------------------------------------
+
+## Issues
+Oozing from unused hotend. I want to add blockers, maybe thin flexible brass? 
+No mirroring/duplication support (waiting for klipper).
+
+## Future plans
+Give Z2 a dedicated driver, so I can auto-tilt. Works very well.
+But I'm out if drivers, so maybe add CAN toolheads somewhere?
+Add probe mount, v6 nozzle perhaps so no offset? Do not need for homing, just for building mesh.
